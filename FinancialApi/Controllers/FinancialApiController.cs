@@ -23,7 +23,8 @@ namespace FinancialApi.Controllers
 			if (result == -1)
 				return NotFound("Customer with this ID is not found");
 
-			return Ok(string.Format("Balance for customer with ID {0}: {1}", id, result));
+			//return Ok(string.Format("Balance for customer with ID {0}: {1}", id, result));
+			return Ok(result);
 		}
 		[HttpPost]
 		public async Task<ActionResult<Customer>> RegistrateCustomer(string surname, string name, string patronymic, string birthDate)

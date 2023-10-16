@@ -17,8 +17,7 @@ namespace FinancialApi.Database
 
 		protected override void ConfigureConventions(ModelConfigurationBuilder configurationBuilder)
 		{
-			configurationBuilder.Properties<decimal>()
-				.HavePrecision(18, 6);
+			configurationBuilder.Properties<decimal>().HavePrecision(18, 6);
 		}
 
 		public DbSet<Customer> Customers { get; set; }
